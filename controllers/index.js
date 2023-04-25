@@ -7,5 +7,4 @@ const anotherPage = (req, res, next) => {
 };
 
 
-
 module.exports = {homePage, anotherPage}

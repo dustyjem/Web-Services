@@ -1,5 +1,7 @@
 GET http://localhost:3000 HTTP/1.1
 
 ###
-
 GET http://localhost:3000/anotherPage HTTP/1.1
+
+###
+GET https://web-services-meci.onrender.com HTTP/1.1
