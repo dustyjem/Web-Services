@@ -1,0 +1,25 @@
+{
+    "contact": {
+    "firstName": "James",
+    "lastName": "Kelly",
+        "email:": "jamesk@example.com",
+        " favoriteColor": "blue",
+         "birthday": "1990-05-10"
+        },
+
+        "contact2": {
+            "firstName": "James",
+            "lastName": "Kelly",
+            "email:": "jamesk@example.com",
+            " favoriteColor": "blue",
+             "birthday": "1990-05-10"
+            },
+
+            "contact3": {
+                "firstName": "James",
+                "lastName": "Kelly",
+                "email:": "jamesk@example.com",
+                " favoriteColor": "blue",
+                 "birthday": "1990-05-10"
+                }
+}

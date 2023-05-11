@@ -1,16 +1,16 @@
 // const routes = require('express').Router();
+// const myControllers = require('../controllers/index.js');
 
-// const myController = require('../controllers')
 
-// routes.get('/', myController.homePage)
-// routes.get('/anotherPage', myController.anotherPage)
+
+// routes.get('/', require('./index'))
+// // routes.get('/:id', myControllers.getSingle)
 
 
 // module.exports = routes;
-
 const express = require('express');
 const router = express.Router();
 
-router.use('/contact', require('./contact'))
+router.use('/contacts', require('./contacts'))
 
 module.exports = router;
