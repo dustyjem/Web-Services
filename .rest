@@ -1,7 +1,19 @@
-GET http://localhost:3000 HTTP/1.1
+###
+GET http://localhost:8080/contacts HTTP/1.1
+
 
 ###
-GET http://localhost:3000/anotherPage HTTP/1.1
+POST http://localhost:8080/contacts HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Emmanuel",
+    "lastName": "Slanter",
+    "email": "slantere@somemail.com",
+    "favoriteColor": "Greens",
+    "birthday": "1999-09-09T00:00:00.000Z"
+  }
 
 ###
-GET https://web-services-meci.onrender.com HTTP/1.1
+DELETE http://localhost:8080/contacts/6462762444f3aec98814cbff HTTP/1.1
+
