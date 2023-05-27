@@ -9,19 +9,8 @@
 // const e = require('express');
 // // const { getDb } = require('../db/db.js');
 
-
-
-// const getAllContacts = async (req, res) => {
-//     console.log("I am here");
-//     const gettinDb = mongodb.getDb().db("mydb").collection("contacts").find();
-//     gettinDb.toArray((err, result) => {
-//         if (err) throw err;
-//         console.log(result);
-//         res.send(result);
-//     })
-// }
-
 // module.exports = {getAllContacts}
+const { body, validationResult } = require('express-validator');
 
 const mongodb = require('../db/db');
 const ObjectId = require('mongodb').ObjectId;
@@ -86,5 +75,13 @@ const remove = async (req, res, next) => {
   res.status(204).send();
 };
 
-module.exports = { getAll, getSingle, create, update, remove };
+const createContactErrorHandler = (req, res, next) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  next();
+};
+
+module.exports = { getAll, getSingle, create, update, remove, createContactErrorHandler };
 
